@@ -1,0 +1,9 @@
+.nav-link {
+    color: white;
+}
+.nav-link:hover {
+    color: rgb(173, 173, 173)
+}
+.pointer {
+    cursor: pointer
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador Conteúdo</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-yJpxAFV0Ip/w63YkZfDWDTU6re/Oc3ZiVqMa97pi8uPt92y0wzeK3UFM2yQRhEom" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    
+    <header class="sticky-top bg-dark text-white">
+        <div class="container navbar navbar-expand-lg">
+            <h1>Gerador Banner</h1>
+
+            <button type="button" class="navbar-toggler bg-white" data-toggle="collapse" data-target="#menuPrincipal">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <nav id="menuPrincipal" class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav nav nav-pills">
+                    <li class="nav-item">
+                        <a href="./geradorBanner.html" class="nav-link">Gerador Banner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./geradorBotaoCompra.html" class="nav-link">Gerador Botão Compra</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="copiar">
+            <div id="banner" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-interval="4000">
+                        <!-- <a href="#">
+                            <picture>
+                                <source media="(max-width: 464px)" srcset="">
+                                <source media="(max-width: 1024px)" srcset="https://www.iobeducacao.com/imagemsite/1261/Banner-Compra-SST-ICMS-RegrasNacionais-Tablet.png">
+                                <source media="(max-width: 1025px)" srcset="https://www.iobeducacao.com/imagemsite/1260/Banner-Compra-SST-ICMS-RegrasNacionais-Desktop.png">
+                                <img class="d-block w-100" src="https://www.iobeducacao.com/imagemsite/1260/Banner-Compra-SST-ICMS-RegrasNacionais-Desktop.png">
+                            </picture>
+                        </a> -->
+                    </div>
+                    
+                </div>
+                <a data-slide="prev" href="#banner" class="carousel-control-prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a data-slide="next" href="#banner" class="carousel-control-next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+                
+                <ol class="carousel-indicators">
+                    <!-- <li data-slide-to="0" data-target="#banner" class="active"></li> -->
+                </ol>
+            </div>
+        </section>
+
+        <section id="inputs">
+            <div class="container">
+                <p class="mt-4 alert-danger p-1 text-center"><strong>Todos os campos devem ser preenchidos</strong></p>
+                <ol>
+                    <li><strong class="text-danger">Direcioamento:</strong> Direcioamento caso não tenha link deve ser colocado (<strong>#</strong>)</li>
+                    <li><strong class="text-danger">Imagem Desktop:</strong> Deve conter a imagem que será apresentada em computadores</li>
+                    <li><strong class="text-danger">Imagem Table:</strong> Deve conter a imagem que será apresentada em Tables</li>
+                    <li><strong class="text-danger">Imagem Table:</strong> Deve conter a imagem que será apresentada em Celulares caso não tenha essa imagem deve ser colocado no lugar a imagem para Tablets</li>
+                </ol>
+
+                <div class="mt-1 row">
+                    <div class="col-md-6 mb-4">
+                        <input type="text" id="linkDirecionamento" name="linkDirecionamento" class="form-control" placeholder="Link para direcionamento">
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <input type="text" id="linkImagemDesktop" name="linkImagemDesktop" class="form-control" placeholder="Link para Imagem Desktop (Largura: 1440px, Altura: 452px)">
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <input type="text" id="linkImagemTablet" name="linkImagemTablet" class="form-control" placeholder="Link para Imagem Tablet (Largura: 768px, Altura: 400px)" required>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <input type="text" id="linkImagemMobile" name="linkImagemMobile" class="form-control" placeholder="Link para Imagem Mobile (Largura: 375px, Altura: 400px)">
+                    </div>
+                </div>
+
+                <button type="button" id="carregadados" class="btn btn-success">Carregar dados</button>
+                
+                <button type="button" id="copiarDados" class="btn btn-primary">Copiar dados</button>
+
+            </div>
+            <div id="textbanner" class="container mt-3 mb-5"></div>
+        </section>
+
+
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script src="../js/geradorBanner.js"></script>
+</body>
+</html>
