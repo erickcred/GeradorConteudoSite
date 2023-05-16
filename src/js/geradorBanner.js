@@ -16,7 +16,7 @@ $(document).ready(() => {
         if (banner == "") {
             banner += `
             <div class="carousel-item active" data-interval="4000">
-                <a href="${linkDirecionamento.val()}">
+                <a href="${linkDirecionamento.val()}" target="_blank">
                     <picture>
                         <source media="(max-width: 464px)" srcset="${linkImagemMobile.val()}">
                         <source media="(max-width: 1024px)" srcset="${linkImagemTablet.val()}">
